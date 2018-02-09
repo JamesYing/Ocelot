@@ -140,7 +140,6 @@ namespace Ocelot.Configuration.Creator
 
             var reRoute = new ReRouteBuilder()
                 .WithDownstreamPathTemplate(fileReRoute.DownstreamPathTemplate)
-                .WithDownstreamHealthcheckPath(fileReRoute.DownstreamHealthcheckPath)
                 .WithUpstreamPathTemplate(fileReRoute.UpstreamPathTemplate)
                 .WithUpstreamHttpMethod(fileReRoute.UpstreamHttpMethod)
                 .WithUpstreamTemplatePattern(upstreamTemplatePattern)

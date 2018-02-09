@@ -34,8 +34,7 @@ namespace Ocelot.Configuration
             List<HeaderFindAndReplace> upstreamHeadersFindAndReplace,
             List<HeaderFindAndReplace> downstreamHeadersFindAndReplace,
             List<DownstreamHostAndPort> downstreamAddresses,
-            string upstreamHost,
-            string downstreamHealthcheckPath)
+            string upstreamHost)
         {
             UpstreamHost = upstreamHost;
             DownstreamHeadersFindAndReplace = downstreamHeadersFindAndReplace ?? new List<HeaderFindAndReplace>();
@@ -65,7 +64,6 @@ namespace Ocelot.Configuration
             EnableEndpointEndpointRateLimiting = enableEndpointRateLimiting;
             RateLimitOptions = ratelimitOptions;
             HttpHandlerOptions = httpHandlerOptions;
-            DownstreamHealthcheckPath = downstreamHealthcheckPath;
         }
 
         public string ReRouteKey {get;private set;}
@@ -96,7 +94,5 @@ namespace Ocelot.Configuration
         public List<HeaderFindAndReplace> DownstreamHeadersFindAndReplace {get;private set;}
         public List<DownstreamHostAndPort> DownstreamAddresses {get;private set;}
         public string UpstreamHost { get; private set; }
-
-        public string DownstreamHealthcheckPath { get; set; }
     }
 }
